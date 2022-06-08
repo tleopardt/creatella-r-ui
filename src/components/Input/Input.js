@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import InputNumber from './type/PhoneNumber';
 import InputDefault from './type/Default';
 import './input.scss';
-import { INPUT_TYPE_PHONE } from 'utils/constant';
+import { INPUT_TYPE_PHONE } from '../../utils/constant';
 
 const Input = ({ title, type, ...props }) => {
     const inputConfig = (

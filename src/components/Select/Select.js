@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import SingleSelect from './type/SingleSelect';
 import MultiSelect from './type/MultiSelect';
 import './select.scss';
-import { SELECT_BOX_MULTI, SELECT_BOX_SINGLE } from 'utils/constant';
+import { SELECT_BOX_COUNTRY, SELECT_BOX_MULTI, SELECT_BOX_SINGLE } from '../../utils/constant';
+import CounrySelect from './type/CountrySelect';
 
 const Select = ({ title, isSearchable = true, type, options, ...props }) => {
     const selectConfig = (
@@ -12,15 +13,22 @@ const Select = ({ title, isSearchable = true, type, options, ...props }) => {
                 isSearchable={isSearchable}
                 options={options}
                 {...props}/>
+
             : type == SELECT_BOX_MULTI
                 ? <MultiSelect
                     isSearchable={isSearchable}
                     options={options}
                     {...props}/>
-                : <SingleSelect
-                    isSearchable={false}
-                    options={options}
-                    {...props}/>
+
+                : type == SELECT_BOX_COUNTRY
+                    ? <CounrySelect
+                        isSearchable={isSearchable}
+                        {...props}/>
+
+                    : <SingleSelect
+                        isSearchable={false}
+                        options={options}
+                        {...props}/>
     );
 
     return (

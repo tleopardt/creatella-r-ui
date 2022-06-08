@@ -37,13 +37,13 @@ stories.add('App', () => {
                     options={options} />
                 <Select
                     title='Single select box :'
-                    type='single'
+                    type='single-select'
                     onChange={(e) => console.log(e)}
                     placeholder='Choose an option'
                     options={options} />
                 <Select
                     title='Multi select box :'
-                    type='multi'
+                    type='multi-select'
                     onChange={(e) => console.log(e)}
                     placeholder='Choose an option'
                     options={options} />
@@ -51,10 +51,9 @@ stories.add('App', () => {
             <div style={{ display: 'flex', gap: '15px' }}>
                 <Select
                     title='Country select box :'
-                    type='single'
+                    type='country-select'
                     onChange={(e) => console.log(e)}
-                    placeholder='Choose a country'
-                    options={options} />
+                    placeholder='Choose a country'/>
             </div>
         </div>
     );
