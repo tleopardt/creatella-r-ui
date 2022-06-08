@@ -17,12 +17,12 @@ stories.add('App', () => {
                 <Input
                     title='Your phone number :'
                     placeholder='Enter the number'
-                    type='phone'
+                    type='phone-input'
                     onChange={(e) => console.log(e)}/>
                 <Input
                     title='Partners phone number :'
                     placeholder='Enter the number'
-                    type='phone'
+                    type='phone-input'
                     onChange={(e) => console.log(e)}/>
                 <Input title='First Name :' placeholder='Enter your first name' onChange={(e) => console.log(e)}/>
             </div>
